@@ -103,17 +103,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     document.querySelector("#danmuCanvas")?.addEventListener("click", (e) => {
-        // let mouseX = (e as MouseEvent).clientX;
-        // let mouseY = (e as MouseEvent).clientY;
-
-        // canvas.danmus.forEach((danmu) => {
-        //     if((mouseX > danmu.x) && (mouseX < danmu.x + danmu.width) && (mouseY > danmu.y) && (mouseY < danmu.y + 40)) {
-        //         canvas.isPaused = true;
-        //     } else if (canvas.isPaused) {
-        //         canvas.isPaused = false;
-        //         // canvas.update();
-        //     }
-        // });
         e.preventDefault();
         if (canvas.isPaused) {
             canvas.isPaused = false;
@@ -122,9 +111,6 @@ window.addEventListener("DOMContentLoaded", () => {
             canvas.isPaused = true;
         }
         
-
-
-        // console.log(mouseX, mouseY);
     });
 
     document.querySelector("#danmuCanvas")?.addEventListener("mousemove", (e) => {
