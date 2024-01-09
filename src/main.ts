@@ -1,5 +1,5 @@
 import { invoke } from "@tauri-apps/api/tauri";
-import { WebviewWindow } from '@tauri-apps/api/window'
+import { WebviewWindow, appWindow } from '@tauri-apps/api/window'
 let greetInputEl: HTMLInputElement | null;
 let greetMsgEl: HTMLElement | null;
 
@@ -34,5 +34,11 @@ window.addEventListener("DOMContentLoaded", () => {
       webview.show();
       console.log('webview window created');
 })
+  });
+
+  document.querySelector("#close-btn")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("close");
+    appWindow.close();
   });
 });

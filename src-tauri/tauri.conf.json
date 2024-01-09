@@ -37,8 +37,8 @@
       {
         "fullscreen": false,
         "resizable": false,
-        "title": "shannmind",
-        "url": "index.html"
+        "title": "shaan",
+        "decorations": false
       }
     ],
     "systemTray":{

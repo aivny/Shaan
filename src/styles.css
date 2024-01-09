@@ -12,8 +12,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  user-select: none; 
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 .container {
   margin: 0;
   padding-top: 10vh;
@@ -104,4 +109,17 @@ button {
   button:active {
     background-color: #0f0f0f69;
   }
+}
+/* 自定义标题栏样式 */
+#title-bar {
+  margin: 0%;
+  padding: 0%;
+  -webkit-app-region: drag; /* 使标题栏可拖动 */
+  display: flex;
+  justify-content: space-between;
+  /* ... 其他样式 */
+}
+#window-controls {
+  -webkit-app-region: no-drag; /* 防止控制按钮拖动窗口 */
+  /* ... 其他样式 */
 }

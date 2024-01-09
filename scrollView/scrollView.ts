@@ -64,7 +64,7 @@ class DanmuCanvas {
         this.danmus = this.danmus.filter(
             (danmu) => danmu.x + this.context.measureText(danmu.text).width > 0
         );
-        if (!this.isPaused) {
+        if (!this.isPaused && document.visibilityState === 'visible') {
             requestAnimationFrame(() => this.update());
         }
     }
@@ -76,7 +76,10 @@ const danmuWorker = new Worker(new URL("worker.js", import.meta.url),{type: "mod
 
 danmuWorker.addEventListener("message", () => {
 
-    if(canvas.isPaused) {
+    if(canvas.isPaused){
+        return;
+    }
+    if (document.visibilityState !== 'visible'){
         return;
     }
     let  pixel: String = Math.floor(56 + Math.random() * 200).toString();

@@ -3333,8 +3333,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "shannmind"
-version = "0.0.0"
+name = "shaan"
+version = "1.0.0"
 dependencies = [
  "rusqlite",
  "serde",
