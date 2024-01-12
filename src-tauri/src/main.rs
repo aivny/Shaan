@@ -22,12 +22,4 @@ fn main() {
         .run(context)
         .expect("error while running tauri application");
 
-    
-    // tauri::Builder::default()
-    //      // ✅ 将 `tauri.conf.json` 上配置的图标添加到系统托盘
-    //     .run(context)
-    //     .expect("error while running OhMyBox application");
-
-    
-
 }
