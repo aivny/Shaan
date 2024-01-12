@@ -22,4 +22,5 @@ fn main() {
         .run(context)
         .expect("error while running tauri application");
 
+        
 }
