@@ -14,7 +14,7 @@ fn main() {
     tauri::Builder::default()
         .system_tray(tauri::SystemTray::default())
         .invoke_handler(tauri::generate_handler![greet])
-        .setup( |app| {
+        .setup( |_app| {
             let conn = db::connect().unwrap();
             let _ = db::insert(&conn, "hua ke you!2", "very very much.");
             Ok(())
