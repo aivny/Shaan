@@ -1,8 +1,9 @@
 extern crate rusqlite;
 
 use rusqlite::{Connection, Result, params};
+use serde::{Serialize, Deserialize};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Mind{
   id: i32,
   title: String,
